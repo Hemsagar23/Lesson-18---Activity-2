@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #222;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+    background: #04AA6D;
+}
+
+section {
+    min-height: 100vh;
+    padding: 100px 30px 30px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+section:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+/* Scrollspy simulation using CSS */
+section:target {
+    scroll-margin-top: 60px;
+}
+
+#home:target~nav a[href="#home"],
+#services:target~nav a[href="#services"],
+#about:target~nav a[href="#about"],
+#contact:target~nav a[href="#contact"] {
+    background-color: #04AA6D;
+}
